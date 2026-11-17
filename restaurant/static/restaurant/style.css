@@ -1,0 +1,147 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    background-color: #fffaf0;
+    color: #38271f;
+}
+
+nav {
+    background-color: #38271f;
+    width: 85%;
+    margin: 25px auto;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #e5a45b;
+}
+
+.banner {
+    width: 85%;
+    margin: 30px auto;
+    padding: 60px 35px;
+    min-height: 250px;
+    color: white;
+    border-radius: 18px;
+    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+    url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4");
+    background-size: cover;
+    background-position: center;
+}
+
+.banner h1 {
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+.banner p {
+    line-height: 1.8;
+}
+
+.home-cards, .menu-container, .team-container {
+    width: 85%;
+    margin: 35px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card, .food-card, .team-card {
+    background-color: #f3eadc;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.card img, .food-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.card p, .food-card p, .team-card p {
+    line-height: 1.7;
+}
+
+.heading {
+    text-align: center;
+    margin: 40px;
+}
+
+.heading h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.food-card h2, .team-card h2 {
+    margin: 12px 0;
+}
+
+.price {
+    color: #a34e25;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.team-card img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.contact {
+    width: 80%;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #f3eadc;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+}
+
+.contact p {
+    margin: 12px;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #38271f;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+@media (max-width: 750px) {
+    .home-cards, .menu-container, .team-container {
+        grid-template-columns: 1fr;
+    }
+
+    .banner h1 {
+        font-size: 28px;
+    }
+}

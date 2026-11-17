@@ -1,0 +1,31 @@
+{% extends 'restaurant/base.html' %}
+
+{% block content %}
+
+<div class="heading">
+    <h1>Our Administration</h1>
+    <p>Meet our dedicated team</p>
+</div>
+
+<section class="team-container">
+
+    {% for person in staff %}
+
+    <div class="team-card">
+
+        {% if person.photo_url %}
+        <img src="{{ person.photo_url }}" alt="{{ person.name }}">
+        {% endif %}
+
+        <h2>{{ person.name }}</h2>
+        <p>{{ person.designation }}</p>
+
+    </div>
+
+    {% empty %}
+    <p>No staff members have been added yet.</p>
+    {% endfor %}
+
+</section>
+
+{% endblock %}

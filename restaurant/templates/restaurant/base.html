@@ -1,0 +1,26 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spice Garden Restaurant</title>
+    <link rel="stylesheet" href="{% static 'restaurant/style.css' %}">
+</head>
+<body>
+
+<nav>
+    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'menu' %}">Menu</a>
+    <a href="{% url 'administration' %}">Administration</a>
+    <a href="{% url 'contact' %}">Contact Us</a>
+</nav>
+
+{% block content %}
+{% endblock %}
+
+<footer>
+    <p>Designed by Lashruthi | Spice Garden</p>
+</footer>
+
+</body>
+</html>
